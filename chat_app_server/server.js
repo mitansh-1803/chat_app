@@ -6,7 +6,7 @@ const socketIO = require('socket.io');
 const app = express();
 
 app.use(cors());
-
+const port = process.env.PORT;
 
 const server = http.createServer(app);
 const io = socketIO(server);
@@ -52,10 +52,10 @@ io.on("connection",(socket) => {
     })
 })
 
-app.get('users',(req,res) => {
-    res.send(users)
+app.get('/',(req,res) => {
+    res.send('Server created by Mitansh Rajpoot')
 })
 
-const port = 8000;
+
 server.listen(port, () => console.log(`Server Started at http://localhost:${port}`));
 

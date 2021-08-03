@@ -5,7 +5,7 @@ import Message from '../message';
 import ReactScrollToBottom from 'react-scroll-to-bottom';
 
 
-const ENDPOINT = 'http://localhost:8000/';
+const ENDPOINT = 'https://mitansh-chat-app.herokuapp.com/';
 let socket;
 
 const Home = () => {
