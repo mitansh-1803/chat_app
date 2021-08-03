@@ -89,7 +89,7 @@ const Home = () => {
                     {messages.map((item, index) => <Message index= {index} user={item.id===id?"You": item.user} message={item.message} classs={item.id===id?"right":"left"} />)}
                 </ReactScrollToBottom>
                 <div className="input-box">
-                    <input type="text" id="chat-input" placeholder="Type your message...."/>
+                    <input onKeyPress={(e) => e.key === 'Enter'? send() : null} type="text" id="chat-input" placeholder="Type your message...."/>
                     <button onClick={send} className="send-btn">Send</button>
                 </div>
             </div>
